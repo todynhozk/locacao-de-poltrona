@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+h1 {
+    color: #333;
+    text-align: center; /* Centraliza o título */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px; /* Tamanho de fonte menor para dispositivos móveis */
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #007BFF;
+    color: white;
+}
+input, button {
+    padding: 8px; /* Ajusta o padding para ser menor */
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+/* Estilos para status Locada e Não Locada */
+.locada {
+    background-color: #d4edda; /* Cor verde claro para Locada */
+    color: #155724; /* Cor verde escuro para o texto */
+}
+.nao-locada {
+    background-color: #f8d7da; /* Cor vermelha claro para Não Locada */
+    color: #721c24; /* Cor vermelha escura para o texto */
+}
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    table, th, td {
+        font-size: 12px;
+    }
+    th, td {
+        padding: 8px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    input, button {
+        width: 100%;
+        box-sizing: border-box; /* Inclui padding e border no tamanho total do input e botão */
+    }
+}
+@media (max-width: 480px) {
+    table, th, td {
+        font-size: 10px;
+    }
+    th, td {
+        padding: 6px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    input, button {
+        width: 100%;
+        padding: 6px; /* Ajusta o padding para ser menor ainda */
+        box-sizing: border-box; /* Inclui padding e border no tamanho total do input e botão */
+    }
+}

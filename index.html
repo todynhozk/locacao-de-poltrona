@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Poltronas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Sistema de Controle de Poltronas</h1>
+
+    <div id="form-adicionar">
+        <h3>Adicionar Poltrona</h3>
+        <label for="add-nome">Nome:</label>
+        <input type="text" id="add-nome">
+        <label for="add-local">Localização:</label>
+        <input type="text" id="add-local">
+        <label for="add-data-alocacao">Data de Alocação:</label>
+        <input type="date" id="add-data-alocacao">
+        <label for="add-dias-alocacao">Dias de Alocação:</label>
+        <input type="number" id="add-dias-alocacao">
+        <label for="add-status">Status:</label>
+        <select id="add-status">
+            <option value="Locada">Locada</option>
+            <option value="Não Locada">Não Locada</option>
+        </select>
+        <button type="button" id="adicionar-btn" onclick="adicionarObjeto()">Adicionar</button>
+    </div>
+    
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Localização</th>
+                <th>Data de Alocação</th>
+                <th>Dias de Alocação</th>
+                <th>Data de Devolução</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-objetos">
+            <!-- Os dados dos objetos vão aparecer aqui -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
