@@ -1,51 +1,60 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle de Poltronas</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja de Produtos</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-    <h1>Sistema de Controle de Poltronas</h1>
-
-    <div id="form-adicionar">
-        <h3>Adicionar Poltrona</h3>
-        <label for="add-nome">Nome:</label>
-        <input type="text" id="add-nome">
-        <label for="add-local">Localização:</label>
-        <input type="text" id="add-local">
-        <label for="add-data-alocacao">Data de Alocação:</label>
-        <input type="date" id="add-data-alocacao">
-        <label for="add-dias-alocacao">Dias de Alocação:</label>
-        <input type="number" id="add-dias-alocacao">
-        <label for="add-status">Status:</label>
-        <select id="add-status">
-            <option value="Locada">Locada</option>
-            <option value="Não Locada">Não Locada</option>
-        </select>
-        <button type="button" id="adicionar-btn" onclick="adicionarObjeto()">Adicionar</button>
+  <div class="header">
+    <h1>Minha Loja</h1>
+    <p>Encontre os melhores produtos e acessórios</p>
+  </div>
+  <div class="main-content">
+    <div class="produto-principal">
+      <img src="https://via.placeholder.com/300" alt="Produto Principal" />
+      <div class="produto-info">
+        <h2>Produto Principal</h2>
+        <p class="preco">R$ 199,90</p>
+        <button class="btn-carrinho">Ver Carrinho</button>
+      </div>
     </div>
-    
+    <div class="acessorios">
+      <h2>Acessórios</h2>
+      <div class="acessorios-lista">
+        <div class="item">
+          <img src="https://via.placeholder.com/150" alt="Acessório 1" />
+          <div class="item-info">
+            <p>Acessório 1</p>
+            <p class="preco">R$ 49,90</p>
+          </div>
+          <button class="btn-add">Adicionar</button>
+        </div>
+        <div class="item">
+          <img src="https://via.placeholder.com/150" alt="Acessório 2" />
+          <div class="item-info">
+            <p>Acessório 2</p>
+            <p class="preco">R$ 59,90</p>
+          </div>
+          <button class="btn-add">Adicionar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Localização</th>
-                <th>Data de Alocação</th>
-                <th>Dias de Alocação</th>
-                <th>Data de Devolução</th>
-                <th>Status</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody id="tabela-objetos">
-            <!-- Os dados dos objetos vão aparecer aqui -->
-        </tbody>
-    </table>
+  <div class="modal-carrinho hidden">
+    <div class="popup-carrinho">
+      <button class="fechar-carrinho">X</button>
+      <div class="carrinho">
+        <div class="itens-carrinho"></div>
+        <hr />
+        <div class="total">Total: R$ 0,00</div>
+      </div>
+    </div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
